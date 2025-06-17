@@ -1,5 +1,36 @@
 <script>
     import ExpertiseColumn from './ExpertiseColumn.svelte';
+    import { onMount } from 'svelte';
+
+    onMount(() => {
+        const ctx = document.getElementById('expertiseChart');
+        new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['Front-end', 'Back-end', 'Devops', 'Other'],
+                datasets: [{
+                    label: 'Level of Expertise',
+                    data: [6, 8, 5, 5]
+                }]
+            },
+            options: {
+                elements: {
+                    line: {
+                        borderWidth: 3
+                    }
+                },
+                scales: {
+                    r: {
+                        angleLines: {
+                            display: false
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 10
+                    }
+                }
+            }
+        });
+    });
 
     const expertiseAreas = [
         {
@@ -41,7 +72,7 @@
             title: 'Other',
             technologies: [
                 { src: 'https://img.logo.dev/python.org?token=pk_GpYJISPXQn-cV1pt47q7Rg&size=16&retina=true&format=png', text: 'Python' },
-                { src: 'https://img.logo.dev/github.com?token=pk_GpYJISPXQn-cV1pt47q7Rg&size=16&retina=true&format=png', text: 'Github' },
+                { src: 'https://img.logo.dev/github.com?token=pk_GpYJISPXQn-cV1pt47q7Rg&size=16&retina=true&format=png', text: 'Github Actions' },
                 { src: 'https://img.logo.dev/atlassian.com?token=pk_GpYJISPXQn-cV1pt47q7Rg&size=16&retina=true&format=png', text: 'Atlassian Products' },
                 { src: 'https://img.logo.dev/googlecloudpresscorner.com?token=pk_GpYJISPXQn-cV1pt47q7Rg&size=16&retina=true&format=png', text: 'GCP' },
                 { src: 'https://img.logo.dev/amazon.com?token=pk_GpYJISPXQn-cV1pt47q7Rg&size=16&retina=true&format=png', text: 'AWS' }
@@ -55,8 +86,8 @@
     ];
 </script>
 
-<div class="container-sm">
-    <h2 class="py-2 mt-2 mb-0 border-bottom">Expertise</h2>
+<div class="container-sm pt-2">
+    <h2 class="py-2 mb-0 border-bottom">Expertise</h2>
     <div class="row g-4 pt-4 row-cols-1 row-cols-lg-2">
         {#each expertiseAreas as area}
             <ExpertiseColumn
@@ -66,4 +97,5 @@
             />
         {/each}
     </div>
+    <canvas class="mx-auto my-5" id="expertiseChart"></canvas>
 </div>

@@ -71,3 +71,5 @@ npm run dev
 
 
 https://www.logo.dev/dashboard
+
+https://www.chartjs.org/
