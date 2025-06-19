@@ -1,25 +1,31 @@
 <script>
-    import ExpertiseSection from "../components/ExpertiseSection.svelte";
-    import ExperienceSection from "../components/ExperienceSection.svelte";
-    import Footer from "../components/Footer.svelte";
+    import ExpertiseSection from "../components/sections/ExpertiseSection.svelte";
+    import ExperienceSection from "../components/sections/ExperienceSection.svelte";
+    import Footer from "../components/sections/FooterSection.svelte";
 </script>
 
 <div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-body-tertiary">
     <div class="col-md-6 p-lg-5 mx-auto my-5">
         <h1 class="display-3 fw-bold">Bradley Tenuta</h1>
-        <h3 class="fw-normal text-muted mb-3">Software Engineer, Tech Lead, Consultant</h3>
+        <h3 class="fw-normal text-muted mb-3">Principal Consultant - Tech Lead - Senior Software Engineer</h3>
     </div>
 </div>
 
-<ExpertiseSection />
-<ExperienceSection />
-
-
-<div class="position-relative overflow-hidden p-3 p-md-5">
-    <div class="container-sm pt-2">
+<div class="container-sm p-3 p-md-5">
+    <h2 class="py-2 mb-0 border-bottom">Passion Projects</h2>
+    <div class="row justify-content-start">
         <div class="col-md-6 p-lg-5 my-5">
             <h1 class="display-3 fw-bold">Antigua</h1>
-            <h3 class="fw-normal text-muted mb-3">A website to plot memories down as markers around the globe and share with friends.</h3>
+            <h3 class="fw-normal text-muted mb-3">A <em>Svelte</em> website, to plot memories down as markers around the globe and share with friends.</h3>
+            <div class="d-flex gap-3 lead fw-normal">
+                <a class="icon-link" href="https://antigua-dev.web.app/">Visit now</a>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-end">
+        <div class="col-md-6 p-lg-5 my-5">
+            <h1 class="display-3 fw-bold">IDIOT</h1>
+            <h3 class="fw-normal text-muted mb-3"><small><strong>Id</strong>entify <strong>I</strong>nternet <strong>O</strong>f <strong>T</strong>hings</small><br>A <em>GO</em> command line interface, that enables you to identifier and manage internet of things (IOT) on your local network.</h3>
             <div class="d-flex gap-3 lead fw-normal">
                 <a class="icon-link" href="https://antigua-dev.web.app/">Visit now</a>
             </div>
@@ -27,4 +33,6 @@
     </div>
 </div>
 
+<ExperienceSection />
+<ExpertiseSection />
 <Footer />

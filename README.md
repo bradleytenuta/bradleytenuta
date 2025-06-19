@@ -1,34 +1,16 @@
-# sv
+# Useful Commands:
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
+To pull latest packages from npm:
 
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+npm install
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Start the server and open the app in a new browser tab:
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
 npm run dev -- --open
-
-# This runs the webapp as if it was deployed on firebase.
-serve -s build
 ```
-
-## Building
 
 To create a production version of your app:
 
@@ -36,40 +18,29 @@ To create a production version of your app:
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+# Dependencies:
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
-
-
-## Firebase
+### Firebase
 
 To install and setup firebase on your local machine run the following.
 
+```bash
 npm install firebase
 npm install -g firebase-tools
 firebase login
-
-Dependencies:
-
-Firebase - Link: https://firebase.google.com/docs/web/setup
-- To register project and create project config.
-
-Firebase Hosting - Link: https://firebase.google.com/docs/hosting/quickstart
-
-
-## Notes:
-
-npm install
-npm run build
 firebase deploy --only hosting
+```
 
-or
+#### Links:
+https://firebase.google.com/docs/web/setup - To register project and create project config.
+https://firebase.google.com/docs/hosting/quickstart - To get started with firebase hosting.
 
-npm install
-npm run build
-npm run dev
+### logo.dev
 
+#### Links:
+https://www.logo.dev/dashboard - To view logos and how to use them within your app.
 
-https://www.logo.dev/dashboard
+### chartjs
 
-https://www.chartjs.org/
+#### Links:
+https://www.chartjs.org/ - To use charts on a webpage.

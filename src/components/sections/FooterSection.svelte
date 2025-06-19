@@ -1,5 +1,5 @@
 <script>
-    import TechnologyList from './TechnologyList.svelte';
+    import TechnologyList from '../TechnologyList.svelte';
     export let technologies = [
                 { src: 'https://img.logo.dev/svelte.dev?token=pk_GpYJISPXQn-cV1pt47q7Rg&size=16&retina=true&format=png', text: 'Svelte' },
                 { src: 'https://img.logo.dev/getbootstrap.com?token=pk_GpYJISPXQn-cV1pt47q7Rg&size=16&retina=true&format=png', text: 'Bootsrap' },
@@ -7,7 +7,7 @@
             ];
 </script>
 
-<div class="container">
+<div class="container-sm p-3 p-md-5">
     <footer class="d-flex flex-wrap justify-content-between py-3 my-4 border-top">
         <div class="col-md-4 mb-0 text-body-secondary">
             Built with the following technologies:

@@ -1,5 +1,5 @@
 <script>
-    import ExpertiseColumn from './ExpertiseColumn.svelte';
+    import ExpertiseColumn from '../ExpertiseColumn.svelte';
     import { onMount } from 'svelte';
 
     onMount(() => {
@@ -7,10 +7,10 @@
         new Chart(ctx, {
             type: 'radar',
             data: {
-                labels: ['Front-end', 'Back-end', 'Devops', 'Other'],
+                labels: ['Front-end', 'Back-end', 'Devops', 'Hardware', 'Other'],
                 datasets: [{
                     label: 'Level of Expertise',
-                    data: [6, 8, 5, 5]
+                    data: [6, 8, 5, 3, 5]
                 }]
             },
             options: {
@@ -69,6 +69,14 @@
             ]
         },
         {
+            title: 'Hardware',
+            technologies: [
+                { src: 'https://img.logo.dev/raspberrypi.org?token=pk_GpYJISPXQn-cV1pt47q7Rg&size=16&retina=true&format=png', text: 'Raspberry Pi' },
+                { src: 'https://img.logo.dev/arduino.cc?token=pk_GpYJISPXQn-cV1pt47q7Rg&size=16&retina=true&format=png', text: 'Arduino' }
+            ],
+            certificates: []
+        },
+        {
             title: 'Other',
             technologies: [
                 { src: 'https://img.logo.dev/python.org?token=pk_GpYJISPXQn-cV1pt47q7Rg&size=16&retina=true&format=png', text: 'Python' },
@@ -86,9 +94,10 @@
     ];
 </script>
 
-<div class="container-sm pt-2">
+<div class="container-sm p-3 p-md-5">
     <h2 class="py-2 mb-0 border-bottom">Expertise</h2>
     <div class="row g-4 pt-4 row-cols-1 row-cols-lg-2">
+        <div class="col mb-3 d-flex align-self-center justify-content-center"><canvas id="expertiseChart"></canvas></div>
         {#each expertiseAreas as area}
             <ExpertiseColumn
                 title={area.title}
@@ -97,5 +106,11 @@
             />
         {/each}
     </div>
-    <canvas class="mx-auto my-5" id="expertiseChart"></canvas>
 </div>
+
+<style>
+    #expertiseChart {
+        max-width: 250px;
+        max-height: 250px;
+    }
+</style>

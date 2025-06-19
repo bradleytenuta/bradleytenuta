@@ -1,8 +1,8 @@
 <script>
 </script>
 
-<div class="pt-2 bg-body-tertiary">
-    <div class="container-sm">
+<div class="bg-body-tertiary">
+    <div class="container-sm p-3 p-md-5">
         <h2 class="py-2 mt-2 mb-0 border-bottom">Experience</h2>
         
         <div class="row pt-4 pb-3">
